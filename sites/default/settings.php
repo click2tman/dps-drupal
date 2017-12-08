@@ -24,3 +24,14 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 $settings['install_profile'] = 'standard';
+$databases['default']['default'] = array (
+  'database' => 'drupal',
+  'username' => 'drupal',
+  'password' => 'supersecure',
+  'prefix' => '',
+  'host' => '192.168.0.204',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['hash_salt'] = 'ja7DFFidVUxDhwTC0BHC6u4Y1Nn63FPlfwkrkC256f-VmBTJTjraeZgHykOdQKFyDWMlnVIIew';
