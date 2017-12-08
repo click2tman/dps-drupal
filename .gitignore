@@ -2,6 +2,12 @@
 #sites/*/files
 #sites/*/private
 #files/*
+sites/default/files/php
+sites/default/files/php/*
+sites/default/files/css
+sites/default/files/css/*
+sites/default/files/js
+sites/default/files/js/*
 
 # Avoid accidental modification of pantheon.upstream.yml in sites
 # created from this upstream
