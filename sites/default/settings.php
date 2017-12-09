@@ -24,14 +24,25 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 $settings['install_profile'] = 'standard';
-$databases['default']['default'] = array (
-  'database' => 'drupal',
-  'username' => 'drupal',
-  'password' => 'supersecure',
-  'prefix' => '',
-  'host' => '192.168.0.204',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
+
+$settings['file_private_path'] = '../files-private';
+
+$settings['file_public_path'] = 'sites/default/files';
+
+$config_directories['vcs'] = '../config/default';
+
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => '../config/default/',
 );
+
 $settings['hash_salt'] = 'ja7DFFidVUxDhwTC0BHC6u4Y1Nn63FPlfwkrkC256f-VmBTJTjraeZgHykOdQKFyDWMlnVIIew';
+
+#$settings['trusted_host_patterns'] = array(
+#  '^.+\.drupal.tambalamin\.local$',
+#  '^.drupal.tambalamin\.local$',
+#  '^.+\.dpswww1.drupal.tambalamin\.local$',
+#  '^.dpswww1.drupal.tambalamin\.local$',
+#  '^.+\.dpswww2.drupal.tambalamin\.local$',
+#  '^.dpswww2.drupal.tambalamin\.local$',
+#);
+
